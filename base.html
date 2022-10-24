@@ -1,0 +1,187 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>{% block title %} {% endblock title %}</title>
+</head>
+
+<body>
+  <header>
+  <div class="header">
+    <div class="logo">
+      <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        width="50px" height="50px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+        <path fill="#FFFFFF" d="M46.765,27.779c-0.624,4.952-2.891,9.389-6.248,12.747c-3.382,3.38-7.855,5.654-12.849,6.26l-1.858,2.146
+            c12.188-0.406,22.064-9.916,23.047-21.95C47.999,27.434,47.333,27.631,46.765,27.779z M39.519,8.065
+            c1.1,0.207,2.173,0.508,3.243,0.891C38.381,4.111,32.046,1.067,25,1.067S11.619,4.111,7.238,8.956
+            c1.072-0.384,2.145-0.685,3.242-0.891l0.76-0.144C15.005,4.887,19.785,3.067,25,3.067s9.995,1.819,13.761,4.855L39.519,8.065z
+             M9.483,40.526c-3.357-3.358-5.625-7.795-6.248-12.748c-0.568-0.147-1.234-0.345-2.092-0.797
+            C2.125,39.016,12,48.525,24.188,48.933l-1.858-2.146C17.338,46.181,12.865,43.906,9.483,40.526z"></path>
+        <path fill="#FFFFFF" d="M47.151,16.851c-1.018-2.035-2.69-5.025-3.481-5.383c-0.959-0.432-2.497-1.057-4.521-1.438
+            c-1.035,0.878-1.521,1.386-1.914,2.217c-0.218,0.46,0.007,1.171,1.212,1.551c2.496,0.787,2.932,0.084,3.726,0.182
+            c0.854,1.508,0.857,1.801,1.258,3.291c0,0-0.331,1.106-0.149,3.669c-2.897-2.58-5.362-0.055-6.38,1.199c0,0-0.361-1.38,0.342-2.32
+            c-2.05-1.186-3.904-0.696-5.503,0.448c-0.786-0.454-1.513-0.888-2.439-1.006c0,0-0.289,0.782-1.204,1.696
+            c-0.164-1.89,0-3.997,0.109-4.906c0.236,0.709,0.861-0.363,1.054-0.908c0.143-0.406,0.563-2.126-0.509-1.309
+            C29.26,11.071,28.743,8.092,25,8.092s-4.26,2.979-3.751,5.742c-1.071-0.817-0.651,0.902-0.509,1.309
+            c0.192,0.545,0.817,1.617,1.054,0.908c0.109,0.909,0.273,3.017,0.109,4.906c-0.915-0.914-1.204-1.696-1.204-1.696
+            c-0.927,0.118-1.653,0.552-2.439,1.006c-1.599-1.145-3.453-1.634-5.503-0.448c0.703,0.94,0.342,2.32,0.342,2.32
+            c-1.018-1.254-3.482-3.779-6.38-1.199c0.182-2.563-0.149-3.669-0.149-3.669c0.4-1.49,0.404-1.783,1.258-3.291
+            c0.794-0.098,1.229,0.605,3.726-0.182c1.205-0.38,1.43-1.091,1.212-1.551c-0.394-0.831-0.879-1.339-1.914-2.217
+            c-2.023,0.381-3.562,1.006-4.521,1.438c-0.791,0.357-2.464,3.348-3.481,5.383s-1.854,5.506-1.69,7.813
+            c2.127,1.418,2.816,1,4.525,1.836c1.708,0.836,6.342,1.854,9.213-0.255c0.495,3.885,1.508,5.532,2.119,6.369
+            c0.074-0.824,0.707-3.351,1.195-3.615c-0.121,3.327,1.148,7.988,1.148,11.3l5.009,5.783l-0.283-20.295l-3.721-3.25L25,24.342
+            l4.636-1.805l-3.72,3.25l-0.283,20.294l5.008-5.782c0-3.312,1.27-7.973,1.148-11.3c0.488,0.265,1.121,2.791,1.195,3.615
+            c0.611-0.837,1.624-2.484,2.119-6.369c2.871,2.108,7.505,1.091,9.214,0.255c1.708-0.836,2.397-0.418,4.524-1.836
+            C49.005,22.356,48.17,18.886,47.151,16.851z"></path>
+      </svg>
+
+      <div class="logo-text">
+        <h3>Gym <br> Trainer</h3>
+      </div>
+    </div>
+
+
+<div class="nav_items">
+  <ul class="nav_item_wrapper">
+    <a href=""><li id="home">HOME</li></a>
+    <a href=""><li id="about">ABOUT</li></a>
+    <a href=""><li id="results">RESULTS</li></a>
+    <a href=""><li id="programs">PROGRAMS</li></a>
+    <a href=""><li id="blog">BLOG</li></a>
+    <a href=""><li id="contact">CONTACT</li></a>
+
+  </ul>
+</div>
+
+
+<div class="sm_screen_cntrl">
+  <div class="icon" id="open"><i class="fa fa-bars"></i></div>
+  <div class="icon" id="close"><i class="fa fa-times"></i></div>
+</div>
+
+
+  </div>
+</header>
+  {% block content %}
+  {% endblock content %}
+
+
+  <div class="footer">
+    <div class="footer_box" id="company">
+      <h3>Company</h3>
+      <div class="footer_inner">
+        <a href=""><p class="footer_item">About</p></a>
+        <a href=""><p class="footer_item">Programs</p></a>
+        <a href=""><p class="footer_item">Results</p></a>
+        <a href=""><p class="footer_item">Contact</p></a>
+      </div>
+    </div>
+    <div class="footer_box" id="latest">
+      <h3>Latest Posts</h3>
+      <div class="footer_inner">
+        <div class="footer_item">
+          <div class="footer_item_img">
+            <img src="{% static 'Images/holding.jpg' %}" alt="">
+          </div>
+          <div class="footer_item_text">
+            <a href=""><p>Lorem ipsum dolor sit amet.</p></a>
+          </div>
+        </div>
+        <div class="footer_item">
+          <div class="footer_item_img">
+            <img src="{% static 'Images/holding.jpg' %}" alt="">
+          </div>
+          <div class="footer_item_text">
+            <a href=""><p>Lorem ipsum dolor sit amet.</p></a>
+          </div>
+        </div>
+        <div class="footer_item">
+          <div class="footer_item_img">
+            <img src="{% static 'Images/holding.jpg' %}" alt="">
+          </div>
+          <div class="footer_item_text">
+            <a href=""><p>Lorem ipsum dolor sit amet.</p></a>
+          </div>
+        </div>
+        <div class="footer_item">
+          <div class="footer_item_img">
+            <img src="{% static 'Images/holding.jpg' %}" alt="">
+          </div>
+          <div class="footer_item_text">
+            <a href=""><p>Lorem ipsum dolor sit amet.</p></a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="footer_box" id="popular">
+      <h3>Most Popular</h3>
+      <div class="footer_inner">
+        <div class="footer_item_text">
+          <a href=""><p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet..</p></a>
+        </div>
+        <div class="footer_item_text">
+          <a href=""><p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet..</p></a>
+        </div>
+        <div class="footer_item_text">
+          <a href=""><p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet..</p></a>
+        </div>
+        <div class="footer_item_text">
+          <a href=""><p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet..</p></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer_box" id="logo">
+<div class="svg">
+  <a href="">
+    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    width="50px" height="50px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+    <path fill="#FFFFFF" d="M46.765,27.779c-0.624,4.952-2.891,9.389-6.248,12.747c-3.382,3.38-7.855,5.654-12.849,6.26l-1.858,2.146
+        c12.188-0.406,22.064-9.916,23.047-21.95C47.999,27.434,47.333,27.631,46.765,27.779z M39.519,8.065
+        c1.1,0.207,2.173,0.508,3.243,0.891C38.381,4.111,32.046,1.067,25,1.067S11.619,4.111,7.238,8.956
+        c1.072-0.384,2.145-0.685,3.242-0.891l0.76-0.144C15.005,4.887,19.785,3.067,25,3.067s9.995,1.819,13.761,4.855L39.519,8.065z
+         M9.483,40.526c-3.357-3.358-5.625-7.795-6.248-12.748c-0.568-0.147-1.234-0.345-2.092-0.797
+        C2.125,39.016,12,48.525,24.188,48.933l-1.858-2.146C17.338,46.181,12.865,43.906,9.483,40.526z"></path>
+    <path fill="#FFFFFF" d="M47.151,16.851c-1.018-2.035-2.69-5.025-3.481-5.383c-0.959-0.432-2.497-1.057-4.521-1.438
+        c-1.035,0.878-1.521,1.386-1.914,2.217c-0.218,0.46,0.007,1.171,1.212,1.551c2.496,0.787,2.932,0.084,3.726,0.182
+        c0.854,1.508,0.857,1.801,1.258,3.291c0,0-0.331,1.106-0.149,3.669c-2.897-2.58-5.362-0.055-6.38,1.199c0,0-0.361-1.38,0.342-2.32
+        c-2.05-1.186-3.904-0.696-5.503,0.448c-0.786-0.454-1.513-0.888-2.439-1.006c0,0-0.289,0.782-1.204,1.696
+        c-0.164-1.89,0-3.997,0.109-4.906c0.236,0.709,0.861-0.363,1.054-0.908c0.143-0.406,0.563-2.126-0.509-1.309
+        C29.26,11.071,28.743,8.092,25,8.092s-4.26,2.979-3.751,5.742c-1.071-0.817-0.651,0.902-0.509,1.309
+        c0.192,0.545,0.817,1.617,1.054,0.908c0.109,0.909,0.273,3.017,0.109,4.906c-0.915-0.914-1.204-1.696-1.204-1.696
+        c-0.927,0.118-1.653,0.552-2.439,1.006c-1.599-1.145-3.453-1.634-5.503-0.448c0.703,0.94,0.342,2.32,0.342,2.32
+        c-1.018-1.254-3.482-3.779-6.38-1.199c0.182-2.563-0.149-3.669-0.149-3.669c0.4-1.49,0.404-1.783,1.258-3.291
+        c0.794-0.098,1.229,0.605,3.726-0.182c1.205-0.38,1.43-1.091,1.212-1.551c-0.394-0.831-0.879-1.339-1.914-2.217
+        c-2.023,0.381-3.562,1.006-4.521,1.438c-0.791,0.357-2.464,3.348-3.481,5.383s-1.854,5.506-1.69,7.813
+        c2.127,1.418,2.816,1,4.525,1.836c1.708,0.836,6.342,1.854,9.213-0.255c0.495,3.885,1.508,5.532,2.119,6.369
+        c0.074-0.824,0.707-3.351,1.195-3.615c-0.121,3.327,1.148,7.988,1.148,11.3l5.009,5.783l-0.283-20.295l-3.721-3.25L25,24.342
+        l4.636-1.805l-3.72,3.25l-0.283,20.294l5.008-5.782c0-3.312,1.27-7.973,1.148-11.3c0.488,0.265,1.121,2.791,1.195,3.615
+        c0.611-0.837,1.624-2.484,2.119-6.369c2.871,2.108,7.505,1.091,9.214,0.255c1.708-0.836,2.397-0.418,4.524-1.836
+        C49.005,22.356,48.17,18.886,47.151,16.851z"></path>
+  </svg>
+  </a>
+</div>
+      <div class="logo-footer-text">
+        <h3>Gym <br> Trainer</h3>
+      </div>
+    </div>
+  </div>
+  <script src="{% static 'js/jquery-1.10.2.min.js' %}"></script>
+  <script src="{% static 'js/index.js' %}"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>    AOS.init(); </script>
+</body>
+
+</html>
