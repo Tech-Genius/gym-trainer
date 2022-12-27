@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-51#o$gr5l8mtv_h8+@8&rm*3bd)2wfn)puv!tl0m0z!jy60wi^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['gym-trainee.up.railway.app', '127.0.0.1','localhost']
+ALLOWED_HOSTS = ['gym-trainer-4cuy.onrender.com', '127.0.0.1','localhost']
 
 
 # Application definition

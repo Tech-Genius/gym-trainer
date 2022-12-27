@@ -1,1 +1,1 @@
-web: gunicorn 'thomasgym.wsgi'
+web: python manage.py migrate && gunicorn thomasgym..wsgi
