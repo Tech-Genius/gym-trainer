@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['gym-trainer-4cuy.onrender.com', '127.0.0.1','localhost']
 
-
 # Application definition
 
 INSTALLED_APPS = [
